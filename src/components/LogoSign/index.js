@@ -22,8 +22,8 @@ const LogoWrapper = styled(Link)(
 
 const LogoSignWrapper = styled(Box)(
   () => `
-        width: 52px;
-        height: 38px;
+        width: 100px;
+        height: 80px;
 `
 );
 
@@ -114,9 +114,9 @@ function Logo() {
           overlap="circular"
           color="success"
         >
-          <LogoSignWrapper>
-            <Image src={"/src/images/logo.png"} alt="Picture" width={40} height={40} />
-          </LogoSignWrapper>
+         
+            <Image src={"/logo.png"} alt="Picture" width={200} height={80} />
+          
         </Badge>
       </LogoWrapper>
     </TooltipWrapper>

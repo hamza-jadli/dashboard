@@ -28,7 +28,7 @@ import Label from 'src/components/Label';
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 
-const getStatusLabel = (cryptoOrderStatus) => {
+const getStatusLabel = (OrderStatus) => {
   const map = {
     failed: {
       text: 'Failed',
@@ -44,16 +44,16 @@ const getStatusLabel = (cryptoOrderStatus) => {
     }
   };
 
-  const { text, color } = map[cryptoOrderStatus];
+  const { text, color } = map[OrderStatus];
 
   return <Label color={color}>{text}</Label>;
 };
 
-const applyFilters = (cryptoOrders, filters) => {
-  return cryptoOrders.filter((cryptoOrder) => {
+const applyFilters = (Orders, filters) => {
+  return Orders.filter((Order) => {
     let matches = true;
 
-    if (filters.status && cryptoOrder.status !== filters.status) {
+    if (filters.status && Order.status !== filters.status) {
       matches = false;
     }
 
@@ -61,11 +61,11 @@ const applyFilters = (cryptoOrders, filters) => {
   });
 };
 
-const applyPagination = (cryptoOrders, page, limit) => {
-  return cryptoOrders.slice(page * limit, page * limit + limit);
+const applyPagination = (Orders, page, limit) => {
+  return Orders.slice(page * limit, page * limit + limit);
 };
 
-const RecentOrdersTable = ({ cryptoOrders }) => {
+const StudentsTable = ({ Orders }) => {
   const [page, setPage] = useState(0);
   const [limit, setLimit] = useState(5);
   const [filters, setFilters] = useState({
@@ -112,9 +112,9 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
     setLimit(parseInt(event.target.value));
   };
 
-  const filteredCryptoOrders = applyFilters(cryptoOrders, filters);
-  const paginatedCryptoOrders = applyPagination(
-    filteredCryptoOrders,
+  const filteredOrders = applyFilters(Orders, filters);
+  const paginatedOrders = applyPagination(
+    filteredOrders,
     page,
     limit
   );
@@ -140,9 +140,9 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {paginatedCryptoOrders.map((cryptoOrder) => {
+            {paginatedOrders.map((Order) => {
               return (
-                <TableRow hover key={cryptoOrder.id}>
+                <TableRow hover key={Order.id}>
                   <TableCell>
                     <Typography
                       variant="body1"
@@ -151,7 +151,7 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {cryptoOrder.nom}
+                      {Order.nom}
                     </Typography>
                    
                   </TableCell>
@@ -163,7 +163,7 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {cryptoOrder.orderID}
+                      {Order.prenom}
                     </Typography>
                   </TableCell>
                   <TableCell>
@@ -174,10 +174,10 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {cryptoOrder.adresse}
+                      {Order.adresse}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
-                      {cryptoOrder.sourceDesc}
+                      {Order.sourceDesc}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
@@ -188,17 +188,17 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {cryptoOrder.amountCrypto}
-                      {cryptoOrder.cryptoCurrency}
+                      {Order.email}
+                      {Order.Currency}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
-                      {numeral(cryptoOrder.amount).format(
-                        `${cryptoOrder.currency}0,0.00`
+                      {numeral(Order.email).format(
+                        `${Order.currency}0,0.00`
                       )}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    {getStatusLabel(cryptoOrder.status)}
+                    {getStatusLabel(Order.status)}
                   </TableCell>
                   <TableCell align="right">
                     <Tooltip title="Edit Order" arrow>
@@ -237,7 +237,7 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
       <Box p={2}>
         <TablePagination
           component="div"
-          count={filteredCryptoOrders.length}
+          count={filteredOrders.length}
           onPageChange={handlePageChange}
           onRowsPerPageChange={handleLimitChange}
           page={page}
@@ -249,12 +249,12 @@ const RecentOrdersTable = ({ cryptoOrders }) => {
   );
 };
 
-RecentOrdersTable.propTypes = {
-  cryptoOrders: PropTypes.array.isRequired
+StudentsTable.propTypes = {
+  Orders: PropTypes.array.isRequired
 };
 
-RecentOrdersTable.defaultProps = {
-  cryptoOrders: []
+StudentsTable.defaultProps = {
+  Orders: []
 };
 
-export default RecentOrdersTable;
+export default StudentsTable;

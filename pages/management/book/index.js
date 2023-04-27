@@ -5,7 +5,7 @@ import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
 import Footer from 'src/components/Footer';
 
-import RecentOrders from 'src/content/Management/book/RecentOrders';
+import BooksTable from 'src/content/Management/book/BooksTable';
 
 function ApplicationsEtudiant() {
   return (
@@ -25,7 +25,7 @@ function ApplicationsEtudiant() {
           spacing={3}
         >
           <Grid item xs={12}>
-            <RecentOrders />
+            <BooksTable />
           </Grid>
         </Grid>
       </Container>

@@ -1,65 +1,65 @@
 import { Card } from '@mui/material';
-import RecentOrdersTable from './RecentOrdersTable';
+import StudentsTable from './StudentsTable';
 import { subDays } from 'date-fns';
 
-function RecentOrders() {
-  const etudiant = [
+function StudentsList() {
+  const Students = [
     {
       id: '1',
       nom: 'JADLI',
       orderDate: subDays(new Date(), 1).getTime(),
       status: 'completed',
-      orderID: 'HAMZA',
+      prenom: 'HAMZA',
       adresse: 'CASABLANCA',
-      amountCrypto: 'jadli.hamza@gmail.com',
+      email: 'jadli.hamza@gmail.com',
     },
     {
       id: '2',
       nom: 'AGHSSAL',
       status: 'completed',
-      orderID: 'AMINE',
+      prenom: 'AMINE',
       adresse: 'BOUZNIKA',
-      amountCrypto: 'jamine.aghssal@gmail.com',
+      email: 'jamine.aghssal@gmail.com',
     },
     {
       id: '3',
       nom: 'MOURID',
       status: 'completed',
-      orderID: 'ZAKARIA',
+      prenom: 'ZAKARIA',
       adresse: 'CASABLANCA',
-      amountCrypto: 'mourid.zakaria@gmail.com',
+      email: 'mourid.zakaria@gmail.com',
     },
     {
       id: '4',
       nom: 'TACOS',
       status: 'completed',
-      orderID: 'ILLIASS',
+      prenom: 'ILLIASS',
       adresse: 'KHOURIBGA',
-      amountCrypto: 'illiass.tacos@gmail.com',
+      email: 'illiass.tacos@gmail.com',
     },
     {
       id: '5',
       nom: 'TAHZIMA',
       status: 'completed',
-      orderID: 'ILYAS',
+      prenom: 'ILYAS',
       adresse: 'SAFI',
-      amountCrypto: 'ilyas.tahzima@gmail.com',
+      email: 'ilyas.tahzima@gmail.com',
     },
     {
       id: '6',
       nom: 'ELHAKIMI',
       status: 'completed',
-      orderID: 'OSSAMA',
+      prenom: 'OSSAMA',
       adresse: 'CASABLANCA',
-      amountCrypto: 'ossama.elhakimi@gmail.com',
+      email: 'ossama.elhakimi@gmail.com',
     },
   ];
 
   return (
     <Card>
-      <RecentOrdersTable cryptoOrders={etudiant} />
+      <StudentsTable Orders={Students} />
     </Card>
   );
 }
 
-export default RecentOrders;
+export default StudentsList;

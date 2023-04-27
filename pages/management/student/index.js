@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import SidebarLayout from 'src/layouts/SidebarLayout';
-import PageHeader from 'src/content/Management/Etudiant/PageHeader';
+import PageHeader from 'src/content/Management/Student/PageHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
 import Footer from 'src/components/Footer';
 
-import RecentOrders from 'src/content/Management/Etudiant/RecentOrders';
+import StudentsList from 'src/content/Management/Student/StudentsList';
 
 function ApplicationsEtudiant() {
   return (
@@ -25,7 +25,7 @@ function ApplicationsEtudiant() {
           spacing={3}
         >
           <Grid item xs={12}>
-            <RecentOrders />
+            <StudentsList />
           </Grid>
         </Grid>
       </Container>
