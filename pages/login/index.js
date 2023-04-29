@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import Head from 'next/head';
-import styles from '/src/styles/Signin.module.css'
+import styles from '/src/styles/signin.module.css'
 
 export default Signin;
 
