@@ -115,7 +115,7 @@ function Logo() {
           color="success"
         >
          
-            <Image src={"/logo.png"} alt="Picture" width={200} height={80} />
+            <Image src={"/logonb.png"} alt="Picture" width={200} height={80} />
           
         </Badge>
       </LogoWrapper>

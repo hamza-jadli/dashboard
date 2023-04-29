@@ -65,7 +65,7 @@ const applyPagination = (Orders, page, limit) => {
   return Orders.slice(page * limit, page * limit + limit);
 };
 
-const BooksTable = ({ Orders }) => {
+const LoansTable = ({ Orders }) => {
   const [page, setPage] = useState(0);
   const [limit, setLimit] = useState(5);
   const [filters, setFilters] = useState({
@@ -124,17 +124,17 @@ const BooksTable = ({ Orders }) => {
     <Card>
       <CardHeader
        
-        title="Liste des oeuvres"
+        title="Liste des Emprunts"
       />
       <Divider />
       <TableContainer>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Title</TableCell>
-              <TableCell>Auteur</TableCell>
-              <TableCell>Editeur</TableCell>
-              <TableCell >Genre</TableCell>
+              <TableCell>Id_student</TableCell>
+              <TableCell>Date</TableCell>
+              <TableCell>Id_book</TableCell>
+              <TableCell >Durée</TableCell>
               <TableCell align="right">Status</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
@@ -151,10 +151,13 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.title}
+                      {Order.id_student}
                     </Typography>
                    
                   </TableCell>
+
+
+                  
                   <TableCell>
                     <Typography
                       variant="body1"
@@ -163,7 +166,7 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.auteur}
+                      {format(Order.orderDate, 'MMMM dd yyyy')}
                     </Typography>
                   </TableCell>
                   <TableCell>
@@ -174,7 +177,7 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.editeur}
+                      {Order.id_book}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
                       {Order.sourceDesc}
@@ -188,14 +191,10 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.genre}
-                      {Order.Currency}
+                      {Order.duration}
+                      
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" noWrap>
-                      {numeral(Order.genre).format(
-                        `${Order.currency}0,0.00`
-                      )}
-                    </Typography>
+                    
                   </TableCell>
                   <TableCell align="right">
                     {getStatusLabel(Order.status)}
@@ -249,12 +248,12 @@ const BooksTable = ({ Orders }) => {
   );
 };
 
-BooksTable.propTypes = {
+LoansTable.propTypes = {
   Orders: PropTypes.array.isRequired
 };
 
-BooksTable.defaultProps = {
+LoansTable.defaultProps = {
   Orders: []
 };
 
-export default BooksTable;
+export default LoansTable;

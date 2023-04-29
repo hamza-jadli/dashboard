@@ -5,13 +5,13 @@ import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
 import Footer from 'src/components/Footer';
 
-import BooksTable from 'src/content/Management/book/BooksTable';
+import BooksList from 'src/content/Management/book/BooksList';
 
-function ApplicationsEtudiant() {
+function ApplicationsStudent() {
   return (
     <>
       <Head>
-        <title>Liste des livres</title>
+        <title>Liste des oeuvres</title>
       </Head>
       <PageTitleWrapper>
         <PageHeader />
@@ -25,7 +25,7 @@ function ApplicationsEtudiant() {
           spacing={3}
         >
           <Grid item xs={12}>
-            <BooksTable />
+            <BooksList />
           </Grid>
         </Grid>
       </Container>
@@ -34,8 +34,8 @@ function ApplicationsEtudiant() {
   );
 }
 
-ApplicationsEtudiant.getLayout = (page) => (
+ApplicationsStudent.getLayout = (page) => (
   <SidebarLayout>{page}</SidebarLayout>
 );
 
-export default ApplicationsEtudiant;
+export default ApplicationsStudent;

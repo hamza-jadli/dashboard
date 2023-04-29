@@ -1,28 +1,28 @@
 import cx from 'classnames';
 import Head from 'next/head';
-import { Card,CardHeader,Grid, Container,TextField,Button,Typography } from '@mui/material';
+import { Card,CardHeader,Grid, Container,TextField,Button , PageTitleWrapper,Typography} from '@mui/material';
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
-import PageHeader from 'src/content/Management/Book/PageHeader';
+import PageHeader from 'src/content/Management/Loan/PageHeader';
+export default AddLoan;
 
-export default AddOeuvre;
-
-function AddOeuvre() {
+function AddLoan() {
   return (
     <>
       <Head>
-        <title>Ajouter un Oeuvre </title>
+        <title>Ajouter Emprunt</title>
       </Head>
       <div style={{padding:30}}>
       <Grid container justifyContent="space-between" alignItems="center">
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
-          Ajouter un Oeuvre
+          Ajouter un Emprunt
         </Typography>
       </Grid>
       </Grid>
       </div>
       <Container maxWidth="lg">
+      
         <Grid
           container
           direction="row"
@@ -37,23 +37,23 @@ function AddOeuvre() {
               <CardHeader title="Merci de remplir ce formulaire"/>
               <div style={{paddingLeft:200}}>
               <form id='form'>
-                <TextField id="outlined-basic" label="Title" variant="outlined" /><br/><br/>
-                <TextField id="outlined-basic" label="Auteur" variant="outlined" /><br/><br/>
-                <TextField id="outlined-basic" label="Editeur" variant="outlined" /><br/><br/>
-                <TextField id="outlined-basic" label="Genre" variant="outlined" /><br/><br/>
+                <TextField id="outlined-basic" label="Student ID" variant="outlined" /><br/><br/>
+                <TextField id="outlined-basic" label="Book ID" variant="outlined" /><br/><br/>
+                <TextField id="outlined-basic" label="Date" variant="outlined" /><br/><br/>
+                <TextField id="outlined-basic" label="Durée" variant="outlined" /><br/><br/>
                 <Button variant="contained" style={{margin:20}}>Ajouter</Button>
               </form>
               </div> 
               </Card>
             </Card>
-            {/* <StudentsList /> */}
+           
           </Grid>
         </Grid>
       </Container>
-<Footer/>
+      <Footer />
     </>
   )
 }
-AddOeuvre.getLayout = (page) => (
+AddLoan.getLayout = (page) => (
   <SidebarLayout>{page}</SidebarLayout>
 );

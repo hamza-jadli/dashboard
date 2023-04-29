@@ -225,11 +225,32 @@ function SidebarMenu() {
                     onClick={closeSidebar}
                     startIcon={<TableChartTwoToneIcon />}
                   >
-                    Books List
+                    Gestion des oeuvres
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
+            <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/loan" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/loan'
+                        ? 'active'
+                        : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Gestion des emprunts
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+          </SubMenuWrapper>
           </SubMenuWrapper>
           <SubMenuWrapper>
             <List component="div">
@@ -246,13 +267,36 @@ function SidebarMenu() {
                     onClick={closeSidebar}
                     startIcon={<TableChartTwoToneIcon />}
                   >
-                    Students List
+                    Gestion des etudiants
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
           </SubMenuWrapper>
         </List>
+
+        <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/user" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/book'
+                        ? 'active'
+                        : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Gestion des utilisateurs
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            
+          </SubMenuWrapper>
         <List
           component="div"
           subheader={

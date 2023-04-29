@@ -28,7 +28,7 @@ import Label from 'src/components/Label';
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 
-const getStatusLabel = (OrderStatus) => {
+const getEtatLabel = (Orderetat) => {
   const map = {
     failed: {
       text: 'Failed',
@@ -44,7 +44,7 @@ const getStatusLabel = (OrderStatus) => {
     }
   };
 
-  const { text, color } = map[OrderStatus];
+  const { text, color } = map[Orderetat];
 
   return <Label color={color}>{text}</Label>;
 };
@@ -53,7 +53,7 @@ const applyFilters = (Orders, filters) => {
   return Orders.filter((Order) => {
     let matches = true;
 
-    if (filters.status && Order.status !== filters.status) {
+    if (filters.etat && Order.etat !== filters.etat) {
       matches = false;
     }
 
@@ -65,14 +65,14 @@ const applyPagination = (Orders, page, limit) => {
   return Orders.slice(page * limit, page * limit + limit);
 };
 
-const BooksTable = ({ Orders }) => {
+const StudentsTable = ({ Orders }) => {
   const [page, setPage] = useState(0);
   const [limit, setLimit] = useState(5);
   const [filters, setFilters] = useState({
-    status: null
+    etat: null
   });
 
-  const statusOptions = [
+  const etatOptions = [
     {
       id: 'all',
       name: 'All'
@@ -91,7 +91,7 @@ const BooksTable = ({ Orders }) => {
     }
   ];
 
-  const handleStatusChange = (e) => {
+  const handleEtatChange = (e) => {
     let value = null;
 
     if (e.target.value !== 'all') {
@@ -100,7 +100,7 @@ const BooksTable = ({ Orders }) => {
 
     setFilters((prevFilters) => ({
       ...prevFilters,
-      status: value
+      etat: value
     }));
   };
 
@@ -124,18 +124,18 @@ const BooksTable = ({ Orders }) => {
     <Card>
       <CardHeader
        
-        title="Liste des oeuvres"
+        title="Liste des Etudiants"
       />
       <Divider />
       <TableContainer>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Title</TableCell>
-              <TableCell>Auteur</TableCell>
-              <TableCell>Editeur</TableCell>
-              <TableCell >Genre</TableCell>
-              <TableCell align="right">Status</TableCell>
+              <TableCell>Nom</TableCell>
+              <TableCell>Prenom</TableCell>
+              <TableCell>statut</TableCell>
+              <TableCell >Email</TableCell>
+              <TableCell align="right">Etat</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -151,7 +151,7 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.title}
+                      {Order.nom}
                     </Typography>
                    
                   </TableCell>
@@ -163,7 +163,7 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.auteur}
+                      {Order.prenom}
                     </Typography>
                   </TableCell>
                   <TableCell>
@@ -174,7 +174,7 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.editeur}
+                      {Order.statut}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
                       {Order.sourceDesc}
@@ -188,17 +188,17 @@ const BooksTable = ({ Orders }) => {
                       gutterBottom
                       noWrap
                     >
-                      {Order.genre}
+                      {Order.email}
                       {Order.Currency}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
-                      {numeral(Order.genre).format(
+                      {numeral(Order.email).format(
                         `${Order.currency}0,0.00`
                       )}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
-                    {getStatusLabel(Order.status)}
+                    {getEtatLabel(Order.etat)}
                   </TableCell>
                   <TableCell align="right">
                     <Tooltip title="Edit Order" arrow>
@@ -249,12 +249,12 @@ const BooksTable = ({ Orders }) => {
   );
 };
 
-BooksTable.propTypes = {
+StudentsTable.propTypes = {
   Orders: PropTypes.array.isRequired
 };
 
-BooksTable.defaultProps = {
+StudentsTable.defaultProps = {
   Orders: []
 };
 
-export default BooksTable;
+export default StudentsTable;

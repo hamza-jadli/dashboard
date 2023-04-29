@@ -11,7 +11,7 @@ function PageHeader() {
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
-          Liste des livres
+          Liste des oeuvres
         </Typography>
       </Grid>
       <Grid item>
@@ -21,7 +21,7 @@ function PageHeader() {
           variant="contained"
           startIcon={<AddTwoToneIcon fontSize="small" />}
         >
-          Nouveau livre
+          Nouveau oeuvre
         </Button>
       </Grid>
     </Grid>

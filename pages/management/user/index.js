@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import SidebarLayout from 'src/layouts/SidebarLayout';
-import PageHeader from 'src/content/Management/Student/PageHeader';
+import PageHeader from 'src/content/Management/Users/PageHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Grid, Container } from '@mui/material';
 import Footer from 'src/components/Footer';
 
-import StudentsList from 'src/content/Management/Student/StudentsList';
+import StudentsList from 'src/content/Management/Users/UsersList';
 
 function ApplicationsStudent() {
   return (
     <>
       <Head>
-        <title>Liste des etudiants</title>
+        <title>Liste des utilisateurs</title>
       </Head>
       <PageTitleWrapper>
         <PageHeader />

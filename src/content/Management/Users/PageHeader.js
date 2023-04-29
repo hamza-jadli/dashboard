@@ -11,17 +11,17 @@ function PageHeader() {
     <Grid container justifyContent="space-between" alignItems="center">
       <Grid item>
         <Typography variant="h3" component="h3" gutterBottom>
-          Liste des Etudiants
+          Liste des utilisateurs
         </Typography>
       </Grid>
       <Grid item>
         <Button
-          href='student/add'
+          href='user/add'
           sx={{ mt: { xs: 2, md: 0 } }}
           variant="contained"
           startIcon={<AddTwoToneIcon fontSize="small" />}
         >
-          Nouveau etudiant
+          Nouveau utilisateur
         </Button>
       </Grid>
     </Grid>
