@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import Head from 'next/head';
-import { Card,CardHeader,Grid, Container,TextField,Button } from '@mui/material';
+import { Card,CardHeader,Grid, Container,TextField,Button,Typography } from '@mui/material';
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
 import PageHeader from 'src/content/Management/Users/PageHeader';
@@ -54,6 +54,6 @@ function AddUser() {
     </>
   )
 }
-AddStudent.getLayout = (page) => (
+AddUser.getLayout = (page) => (
   <SidebarLayout>{page}</SidebarLayout>
 );
