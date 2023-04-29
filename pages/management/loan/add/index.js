@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { Card,CardHeader,Grid, Container,TextField,Button , PageTitleWrapper,Typography} from '@mui/material';
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
-import PageHeader from 'src/content/Management/Loan/PageHeader';
 export default AddLoan;
 
 function AddLoan() {
