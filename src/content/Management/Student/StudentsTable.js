@@ -113,19 +113,12 @@ const StudentsTable = ({ Orders }) => {
   };
 
   const filteredOrders = applyFilters(Orders, filters);
-  const paginatedOrders = applyPagination(
-    filteredOrders,
-    page,
-    limit
-  );
+  const paginatedOrders = applyPagination(filteredOrders, page, limit);
   const theme = useTheme();
 
   return (
     <Card>
-      <CardHeader
-       
-        title="Liste des Etudiants"
-      />
+      <CardHeader title="Liste des Etudiants" />
       <Divider />
       <TableContainer>
         <Table>
@@ -134,7 +127,7 @@ const StudentsTable = ({ Orders }) => {
               <TableCell>Nom</TableCell>
               <TableCell>Prenom</TableCell>
               <TableCell>Adresse</TableCell>
-              <TableCell >Email</TableCell>
+              <TableCell>Email</TableCell>
               <TableCell align="right">Status</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
@@ -153,7 +146,6 @@ const StudentsTable = ({ Orders }) => {
                     >
                       {Order.nom}
                     </Typography>
-                   
                   </TableCell>
                   <TableCell>
                     <Typography
@@ -192,16 +184,18 @@ const StudentsTable = ({ Orders }) => {
                       {Order.Currency}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
-                      {numeral(Order.email).format(
-                        `${Order.currency}0,0.00`
-                      )}
+                      {numeral(Order.email).format(`${Order.currency}0,0.00`)}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
                     {getStatusLabel(Order.status)}
                   </TableCell>
                   <TableCell align="right">
-                    <Tooltip title="Edit Order" arrow>
+                    <Tooltip
+                      title="Modifier etudiant"
+                      arrow
+                      href="student/edit"
+                    >
                       <IconButton
                         sx={{
                           '&:hover': {

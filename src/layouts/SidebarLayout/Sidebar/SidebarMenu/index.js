@@ -202,11 +202,81 @@ function SidebarMenu() {
             </List>
           </SubMenuWrapper>
         </List>
+
         <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
-              Management
+              Gestion des Etudiants
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/student" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/student' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Liste des Etudiants
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/student/add" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/student' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Ajouter un Etudiant
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/student/edit" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/student' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Modifier un Etudiant
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+        </List>
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Gestion des oeuvres
             </ListSubheader>
           }
         >
@@ -216,132 +286,199 @@ function SidebarMenu() {
                 <NextLink href="/management/book" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/book'
-                        ? 'active'
-                        : ''
+                      currentRoute === '/management/book' ? 'active' : ''
                     }
                     disableRipple
                     component="a"
                     onClick={closeSidebar}
                     startIcon={<TableChartTwoToneIcon />}
                   >
-                    Gestion des oeuvres
+                    Liste des Oeuvres
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
-            <SubMenuWrapper>
-            <List component="div">
-              <ListItem component="div">
-                <NextLink href="/management/loan" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/management/loan'
-                        ? 'active'
-                        : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<TableChartTwoToneIcon />}
-                  >
-                    Gestion des emprunts
-                  </Button>
-                </NextLink>
-              </ListItem>
-            </List>
-          </SubMenuWrapper>
+            <SubMenuWrapper></SubMenuWrapper>
           </SubMenuWrapper>
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/student" passHref>
+                <NextLink href="/management/book/add" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/student'
-                        ? 'active'
-                        : ''
+                      currentRoute === '/management/book' ? 'active' : ''
                     }
                     disableRipple
                     component="a"
                     onClick={closeSidebar}
                     startIcon={<TableChartTwoToneIcon />}
                   >
-                    Gestion des etudiants
+                    Ajouter un Oeuvre
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
+            <SubMenuWrapper></SubMenuWrapper>
           </SubMenuWrapper>
-        </List>
-
-        <SubMenuWrapper>
+          <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/user" passHref>
+                <NextLink href="/management/book/edit" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/book'
-                        ? 'active'
-                        : ''
+                      currentRoute === '/management/book' ? 'active' : ''
                     }
                     disableRipple
                     component="a"
                     onClick={closeSidebar}
                     startIcon={<TableChartTwoToneIcon />}
                   >
-                    Gestion des utilisateurs
+                    Modifier un Oeuvre
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
-            
+            <SubMenuWrapper></SubMenuWrapper>
           </SubMenuWrapper>
+        </List>
         <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
-              Accounts
+              Gestion des Emprunts
             </ListSubheader>
           }
         >
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/profile" passHref>
+                <NextLink href="/management/loan" passHref>
                   <Button
                     className={
-                      currentRoute === '/management/profile' ? 'active' : ''
+                      currentRoute === '/management/loan' ? 'active' : ''
                     }
                     disableRipple
                     component="a"
                     onClick={closeSidebar}
-                    startIcon={<AccountCircleTwoToneIcon />}
+                    startIcon={<TableChartTwoToneIcon />}
                   >
-                    User Profile
-                  </Button>
-                </NextLink>
-              </ListItem>
-              <ListItem component="div">
-                <NextLink href="/management/profile/settings" passHref>
-                  <Button
-                    className={
-                      currentRoute === '/management/profile/settings'
-                        ? 'active'
-                        : ''
-                    }
-                    disableRipple
-                    component="a"
-                    onClick={closeSidebar}
-                    startIcon={<DisplaySettingsTwoToneIcon />}
-                  >
-                    Account Settings
+                    Liste des Emprunts
                   </Button>
                 </NextLink>
               </ListItem>
             </List>
+            <SubMenuWrapper></SubMenuWrapper>
           </SubMenuWrapper>
-        </List>        
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/loan/add" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/loan' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Ajouter un Emprunt
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/loan/edit" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/loan' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Modifier un Etudiant
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+        </List>
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Gestion des Utilisateurs
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/user" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/user' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Liste des Utilisateurs
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/user/add" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/user' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Ajouter un Utilisateur
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+          <SubMenuWrapper>
+            <List component="div">
+              <ListItem component="div">
+                <NextLink href="/management/user/edit" passHref>
+                  <Button
+                    className={
+                      currentRoute === '/management/user' ? 'active' : ''
+                    }
+                    disableRipple
+                    component="a"
+                    onClick={closeSidebar}
+                    startIcon={<TableChartTwoToneIcon />}
+                  >
+                    Modifier un Utilisateur
+                  </Button>
+                </NextLink>
+              </ListItem>
+            </List>
+            <SubMenuWrapper></SubMenuWrapper>
+          </SubMenuWrapper>
+        </List>
       </MenuWrapper>
     </>
   );

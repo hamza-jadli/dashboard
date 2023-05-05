@@ -12,19 +12,19 @@ import {
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
 
-export default AddOeuvre;
+export default EditLoan;
 
-function AddOeuvre() {
+function EditLoan() {
   return (
     <>
       <Head>
-        <title>Ajouter un Oeuvre </title>
+        <title>Modifier un Emprunt </title>
       </Head>
       <div style={{ padding: 30 }}>
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Typography variant="h3" component="h3" gutterBottom>
-              Ajouter un Oeuvre
+              Modifier un Emprunt
             </Typography>
           </Grid>
         </Grid>
@@ -47,34 +47,34 @@ function AddOeuvre() {
                       <form id="form">
                         <TextField
                           id="outlined-basic"
-                          label="Title"
+                          label="Student ID"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Auteur"
+                          label="Date"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Editeur"
+                          label="Book ID"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Genre"
+                          label="Durée"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <Button variant="contained" style={{ margin: 20 }}>
-                          Ajouter
+                          Modifier
                         </Button>
                       </form>
                     </Grid>
@@ -90,4 +90,4 @@ function AddOeuvre() {
     </>
   );
 }
-AddOeuvre.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
+EditLoan.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;

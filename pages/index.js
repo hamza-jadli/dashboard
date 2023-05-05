@@ -42,13 +42,10 @@ function Overview() {
         <Container maxWidth="lg">
           <Box display="flex" alignItems="center">
             <Logo />
-           
           </Box>
         </Container>
       </HeaderWrapper>
-      <Container maxWidth="lg" sx={{ mt: 8 }}>
-       
-      </Container>
+      <Container maxWidth="lg" sx={{ mt: 8 }}></Container>
     </OverviewWrapper>
   );
 }

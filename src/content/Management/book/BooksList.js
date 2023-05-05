@@ -1,30 +1,19 @@
 import { Card } from '@mui/material';
 import BooksTable from './BooksTable';
-import { subDays } from 'date-fns';
+import React, { useState, useEffect } from 'react';
+import { fetchJson } from 'src/api';
 
 function BooksList() {
-  const Books = [
-    {
-      id: '1',
-      title: '1984',
-      status: 'completed',
-      auteur: 'George Orwell ',
-      editeur: 'Secker and Warburg',
-      genre: 'dystopie',
-    },
-    {
-        id: '2',
-        title: 'Le Seigneur des anneaux',
-        status: 'completed',
-        auteur: 'J.R.R. Tolkien',
-        editeur: 'Allen & Unwin',
-        genre: 'fantasy',
-    },
-  ];
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    fetchJson('books').then((data) => {
+      setBooks(data);
+    });
+  }, []);
 
   return (
     <Card>
-      <BooksTable Orders={Books} />
+      <BooksTable Orders={books} />
     </Card>
   );
 }

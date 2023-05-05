@@ -12,19 +12,19 @@ import {
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
 
-export default AddOeuvre;
+export default EditStudent;
 
-function AddOeuvre() {
+function EditStudent() {
   return (
     <>
       <Head>
-        <title>Ajouter un Oeuvre </title>
+        <title>Modifier un Etudiant </title>
       </Head>
       <div style={{ padding: 30 }}>
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Typography variant="h3" component="h3" gutterBottom>
-              Ajouter un Oeuvre
+              Modifier un Etudiant
             </Typography>
           </Grid>
         </Grid>
@@ -47,34 +47,34 @@ function AddOeuvre() {
                       <form id="form">
                         <TextField
                           id="outlined-basic"
-                          label="Title"
+                          label="Nom"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Auteur"
+                          label="Prenom"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Editeur"
+                          label="Adresse"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <TextField
                           id="outlined-basic"
-                          label="Genre"
+                          label="Email"
                           variant="outlined"
                         />
                         <br />
                         <br />
                         <Button variant="contained" style={{ margin: 20 }}>
-                          Ajouter
+                          Modifier
                         </Button>
                       </form>
                     </Grid>
@@ -90,4 +90,4 @@ function AddOeuvre() {
     </>
   );
 }
-AddOeuvre.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
+EditStudent.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;

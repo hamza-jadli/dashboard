@@ -5,7 +5,8 @@ import AddTwoToneIcon from '@mui/icons-material/AddTwoTone';
 function PageHeader() {
   const user = {
     name: 'The coumpond effect',
-    avatar: 'https://m.media-amazon.com/images/I/4142lGvq+qL._SX350_BO1,204,203,200_.jpg'
+    avatar:
+      'https://m.media-amazon.com/images/I/4142lGvq+qL._SX350_BO1,204,203,200_.jpg'
   };
   return (
     <Grid container justifyContent="space-between" alignItems="center">
@@ -16,7 +17,7 @@ function PageHeader() {
       </Grid>
       <Grid item>
         <Button
-          href='book/add'
+          href="book/add"
           sx={{ mt: { xs: 2, md: 0 } }}
           variant="contained"
           startIcon={<AddTwoToneIcon fontSize="small" />}

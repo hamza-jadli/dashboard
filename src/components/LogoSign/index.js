@@ -6,7 +6,7 @@ import {
   styled,
   useTheme
 } from '@mui/material';
-import Image from 'next/image'
+import Image from 'next/image';
 import Link from 'src/components/Link';
 
 const LogoWrapper = styled(Link)(
@@ -114,9 +114,7 @@ function Logo() {
           overlap="circular"
           color="success"
         >
-         
-            <Image src={"/logonb.png"} alt="Picture" width={200} height={80} />
-          
+          <Image src={'/logonb.png'} alt="Picture" width={200} height={80} />
         </Badge>
       </LogoWrapper>
     </TooltipWrapper>

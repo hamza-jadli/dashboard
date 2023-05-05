@@ -109,10 +109,10 @@ function Wallets() {
                 />
               </AvatarWrapper>
               <Typography variant="h5" noWrap>
-              Fairy Tale Kindle Edition
+                Fairy Tale Kindle Edition
               </Typography>
               <Typography variant="subtitle1" noWrap>
-              by Stephen King
+                by Stephen King
               </Typography>
               <Box
                 sx={{
@@ -140,10 +140,10 @@ function Wallets() {
                 />
               </AvatarWrapper>
               <Typography variant="h5" noWrap>
-              The Compound Effect
+                The Compound Effect
               </Typography>
               <Typography variant="subtitle1" noWrap>
-              by Darren Hardy 
+                by Darren Hardy
               </Typography>
               <Box
                 sx={{
@@ -153,7 +153,6 @@ function Wallets() {
                 <Typography variant="h3" gutterBottom noWrap>
                   25 MAD
                 </Typography>
-                
               </Box>
             </CardContent>
           </Card>
@@ -172,10 +171,10 @@ function Wallets() {
                 />
               </AvatarWrapper>
               <Typography variant="h5" noWrap>
-              blue ocean strategy
+                blue ocean strategy
               </Typography>
               <Typography variant="subtitle1" noWrap>
-              by W. Chan Kim
+                by W. Chan Kim
               </Typography>
               <Box
                 sx={{
@@ -185,7 +184,6 @@ function Wallets() {
                 <Typography variant="h3" gutterBottom noWrap>
                   30 MAD
                 </Typography>
-               
               </Box>
             </CardContent>
           </Card>

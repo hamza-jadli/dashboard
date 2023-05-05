@@ -143,7 +143,7 @@ function AccountBalance() {
               <Typography variant="h1" gutterBottom>
                 584.23 MAD
               </Typography>
-              
+
               <Box
                 display="flex"
                 sx={{

@@ -34,8 +34,6 @@ function ApplicationsStudent() {
   );
 }
 
-ApplicationsStudent.getLayout = (page) => (
-  <SidebarLayout>{page}</SidebarLayout>
-);
+ApplicationsStudent.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
 
 export default ApplicationsStudent;

@@ -1,64 +1,52 @@
-import { Card } from '@mui/material';
-import UsersTable from './UsersTable';
-import { subDays } from 'date-fns';
-
-function UsersList() {
-  const Users = [
+module.exports = (req, res) => {
+  res.send([
     {
       id: '1',
       nom: 'JADLI',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'HAMZA',
-      statut: 'Bibliothécaire',
+      adresse: 'CASABLANCA',
       email: 'jadli.hamza@gmail.com'
     },
     {
       id: '2',
       nom: 'AGHSSAL',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'AMINE',
-      statut: 'Administrateur',
+      adresse: 'BOUZNIKA',
       email: 'jamine.aghssal@gmail.com'
     },
     {
       id: '3',
       nom: 'MOURID',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'ZAKARIA',
-      statut: 'Employé ',
+      adresse: 'CASABLANCA',
       email: 'mourid.zakaria@gmail.com'
     },
     {
       id: '4',
       nom: 'TACOS',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'ILLIASS',
-      statut: 'Employé ',
+      adresse: 'KHOURIBGA',
       email: 'illiass.tacos@gmail.com'
     },
     {
       id: '5',
       nom: 'TAHZIMA',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'ILYAS',
-      statut: 'Employé ',
+      adresse: 'SAFI',
       email: 'ilyas.tahzima@gmail.com'
     },
     {
       id: '6',
       nom: 'ELHAKIMI',
-      etat: 'completed',
+      status: 'completed',
       prenom: 'OSSAMA',
-      statut: 'Employé ',
+      adresse: 'CASABLANCA',
       email: 'ossama.elhakimi@gmail.com'
     }
-  ];
-
-  return (
-    <Card>
-      <UsersTable Orders={Users} />
-    </Card>
-  );
-}
-
-export default UsersList;
+  ]);
+};

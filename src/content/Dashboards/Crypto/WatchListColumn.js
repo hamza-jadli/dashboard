@@ -169,10 +169,10 @@ function WatchListColumn() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                Fairy Tale Kindle Edition
+                  Fairy Tale Kindle Edition
                 </Typography>
                 <Typography variant="subtitle1" noWrap>
-                by Stephen King
+                  by Stephen King
                 </Typography>
               </Box>
             </Box>
@@ -204,16 +204,13 @@ function WatchListColumn() {
                 justifyContent: 'flex-start'
               }}
             >
-              
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{
                   pl: 1
                 }}
-              >
-               
-              </Typography>
+              ></Typography>
             </Box>
           </Box>
           <Chart
@@ -244,10 +241,10 @@ function WatchListColumn() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                The Compound Effect
+                  The Compound Effect
                 </Typography>
                 <Typography variant="subtitle1" noWrap>
-                by Darren Hardy 
+                  by Darren Hardy
                 </Typography>
               </Box>
             </Box>
@@ -285,9 +282,7 @@ function WatchListColumn() {
                 sx={{
                   pl: 1
                 }}
-              >
-                
-              </Typography>
+              ></Typography>
             </Box>
           </Box>
           <Chart
@@ -318,10 +313,10 @@ function WatchListColumn() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                blue ocean strategy
+                  blue ocean strategy
                 </Typography>
                 <Typography variant="subtitle1" noWrap>
-                W. Chan Kim
+                  W. Chan Kim
                 </Typography>
               </Box>
             </Box>
@@ -353,16 +348,13 @@ function WatchListColumn() {
                 justifyContent: 'flex-start'
               }}
             >
-              
               <Typography
                 variant="body2"
                 color="text.secondary"
                 sx={{
                   pl: 1
                 }}
-              >
-                
-              </Typography>
+              ></Typography>
             </Box>
           </Box>
           <Chart

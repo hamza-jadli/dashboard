@@ -113,19 +113,12 @@ const LoansTable = ({ Orders }) => {
   };
 
   const filteredOrders = applyFilters(Orders, filters);
-  const paginatedOrders = applyPagination(
-    filteredOrders,
-    page,
-    limit
-  );
+  const paginatedOrders = applyPagination(filteredOrders, page, limit);
   const theme = useTheme();
 
   return (
     <Card>
-      <CardHeader
-       
-        title="Liste des Emprunts"
-      />
+      <CardHeader title="Liste des Emprunts" />
       <Divider />
       <TableContainer>
         <Table>
@@ -134,7 +127,7 @@ const LoansTable = ({ Orders }) => {
               <TableCell>Id_student</TableCell>
               <TableCell>Date</TableCell>
               <TableCell>Id_book</TableCell>
-              <TableCell >Durée</TableCell>
+              <TableCell>Durée</TableCell>
               <TableCell align="right">Status</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
@@ -153,11 +146,8 @@ const LoansTable = ({ Orders }) => {
                     >
                       {Order.id_student}
                     </Typography>
-                   
                   </TableCell>
 
-
-                  
                   <TableCell>
                     <Typography
                       variant="body1"
@@ -192,15 +182,13 @@ const LoansTable = ({ Orders }) => {
                       noWrap
                     >
                       {Order.duration}
-                      
                     </Typography>
-                    
                   </TableCell>
                   <TableCell align="right">
                     {getStatusLabel(Order.status)}
                   </TableCell>
                   <TableCell align="right">
-                    <Tooltip title="Edit Order" arrow>
+                    <Tooltip title="Modifier emprunt" arrow href="loan/edit">
                       <IconButton
                         sx={{
                           '&:hover': {

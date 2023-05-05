@@ -165,10 +165,10 @@ function WatchListRow() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                Fairy Tale Kindle Edition
+                  Fairy Tale Kindle Edition
                 </Typography>
                 <Typography variant="subtitle1" noWrap>
-                by Stephen King
+                  by Stephen King
                 </Typography>
               </Box>
             </Box>
@@ -234,10 +234,10 @@ function WatchListRow() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                The compound effect
+                  The compound effect
                 </Typography>
                 <Typography variant="subtitle1" noWrap>
-                by Darren Hardy 
+                  by Darren Hardy
                 </Typography>
               </Box>
             </Box>
@@ -303,10 +303,11 @@ function WatchListRow() {
               </AvatarWrapper>
               <Box>
                 <Typography variant="h4" noWrap>
-                blue ocean strategy                </Typography>
+                  blue ocean strategy{' '}
+                </Typography>
                 <Typography variant="subtitle1" noWrap>
-                W. Chan Kim
-                 </Typography>
+                  W. Chan Kim
+                </Typography>
               </Box>
             </Box>
             <Label color="secondary">24h</Label>

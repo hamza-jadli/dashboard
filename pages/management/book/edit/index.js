@@ -12,19 +12,19 @@ import {
 import SidebarLayout from 'src/layouts/SidebarLayout';
 import Footer from 'src/components/Footer';
 
-export default AddOeuvre;
+export default EditOeuvre;
 
-function AddOeuvre() {
+function EditOeuvre() {
   return (
     <>
       <Head>
-        <title>Ajouter un Oeuvre </title>
+        <title>Modifier un Oeuvre </title>
       </Head>
       <div style={{ padding: 30 }}>
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Typography variant="h3" component="h3" gutterBottom>
-              Ajouter un Oeuvre
+              Modifier un Oeuvre
             </Typography>
           </Grid>
         </Grid>
@@ -74,7 +74,7 @@ function AddOeuvre() {
                         <br />
                         <br />
                         <Button variant="contained" style={{ margin: 20 }}>
-                          Ajouter
+                          Modifier
                         </Button>
                       </form>
                     </Grid>
@@ -90,4 +90,4 @@ function AddOeuvre() {
     </>
   );
 }
-AddOeuvre.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;
+EditOeuvre.getLayout = (page) => <SidebarLayout>{page}</SidebarLayout>;

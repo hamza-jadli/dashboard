@@ -3,7 +3,8 @@ import { Typography, Avatar, Grid, useTheme } from '@mui/material';
 function PageHeader() {
   const user = {
     name: 'JADLI HAMZA',
-    avatar: 'https://i.pinimg.com/474x/1a/61/68/1a6168ed19756dbb1a815ea085bfbc65.jpg'
+    avatar:
+      'https://i.pinimg.com/474x/1a/61/68/1a6168ed19756dbb1a815ea085bfbc65.jpg'
   };
   const theme = useTheme();
 

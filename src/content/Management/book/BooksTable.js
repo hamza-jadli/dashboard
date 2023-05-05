@@ -113,19 +113,12 @@ const BooksTable = ({ Orders }) => {
   };
 
   const filteredOrders = applyFilters(Orders, filters);
-  const paginatedOrders = applyPagination(
-    filteredOrders,
-    page,
-    limit
-  );
+  const paginatedOrders = applyPagination(filteredOrders, page, limit);
   const theme = useTheme();
 
   return (
     <Card>
-      <CardHeader
-       
-        title="Liste des oeuvres"
-      />
+      <CardHeader title="Liste des oeuvres" />
       <Divider />
       <TableContainer>
         <Table>
@@ -134,7 +127,7 @@ const BooksTable = ({ Orders }) => {
               <TableCell>Title</TableCell>
               <TableCell>Auteur</TableCell>
               <TableCell>Editeur</TableCell>
-              <TableCell >Genre</TableCell>
+              <TableCell>Genre</TableCell>
               <TableCell align="right">Status</TableCell>
               <TableCell align="right">Actions</TableCell>
             </TableRow>
@@ -153,7 +146,6 @@ const BooksTable = ({ Orders }) => {
                     >
                       {Order.title}
                     </Typography>
-                   
                   </TableCell>
                   <TableCell>
                     <Typography
@@ -192,16 +184,14 @@ const BooksTable = ({ Orders }) => {
                       {Order.Currency}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" noWrap>
-                      {numeral(Order.genre).format(
-                        `${Order.currency}0,0.00`
-                      )}
+                      {numeral(Order.genre).format(`${Order.currency}0,0.00`)}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
                     {getStatusLabel(Order.status)}
                   </TableCell>
                   <TableCell align="right">
-                    <Tooltip title="Edit Order" arrow>
+                    <Tooltip title="Edit Order" arrow href="book/edit">
                       <IconButton
                         sx={{
                           '&:hover': {
