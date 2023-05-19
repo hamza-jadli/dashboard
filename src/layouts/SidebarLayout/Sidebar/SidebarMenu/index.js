@@ -214,7 +214,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/student" passHref>
+                <NextLink href="/admin/management/student" passHref>
                   <Button
                     className={
                       currentRoute === '/management/student' ? 'active' : ''
