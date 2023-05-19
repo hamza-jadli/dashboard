@@ -234,7 +234,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/student/add" passHref>
+                <NextLink href="/admin//management/student/add" passHref>
                   <Button
                     className={
                       currentRoute === '/management/student' ? 'active' : ''
@@ -254,7 +254,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/student/edit" passHref>
+                <NextLink href="/admin//management/student/edit" passHref>
                   <Button
                     className={
                       currentRoute === '/management/student' ? 'active' : ''
@@ -283,7 +283,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/book" passHref>
+                <NextLink href="/admin//management/book" passHref>
                   <Button
                     className={
                       currentRoute === '/management/book' ? 'active' : ''
@@ -303,7 +303,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/book/add" passHref>
+                <NextLink href="/admin//management/book/add" passHref>
                   <Button
                     className={
                       currentRoute === '/management/book' ? 'active' : ''
@@ -323,7 +323,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/book/edit" passHref>
+                <NextLink href="/admin//management/book/edit" passHref>
                   <Button
                     className={
                       currentRoute === '/management/book' ? 'active' : ''
@@ -352,7 +352,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/loan" passHref>
+                <NextLink href="/admin//management/loan" passHref>
                   <Button
                     className={
                       currentRoute === '/management/loan' ? 'active' : ''
@@ -372,7 +372,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/loan/add" passHref>
+                <NextLink href="/admin//management/loan/add" passHref>
                   <Button
                     className={
                       currentRoute === '/management/loan' ? 'active' : ''
@@ -392,7 +392,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/loan/edit" passHref>
+                <NextLink href="/admin//management/loan/edit" passHref>
                   <Button
                     className={
                       currentRoute === '/management/loan' ? 'active' : ''
@@ -421,7 +421,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/user" passHref>
+                <NextLink href="/admin//management/user" passHref>
                   <Button
                     className={
                       currentRoute === '/management/user' ? 'active' : ''
@@ -441,7 +441,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/user/add" passHref>
+                <NextLink href="/admin//management/user/add" passHref>
                   <Button
                     className={
                       currentRoute === '/management/user' ? 'active' : ''
@@ -461,7 +461,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <NextLink href="/management/user/edit" passHref>
+                <NextLink href="/admin//management/user/edit" passHref>
                   <Button
                     className={
                       currentRoute === '/management/user' ? 'active' : ''
